@@ -1,0 +1,110 @@
+.modalTarefa {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal>.modalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.modalHeader>h2 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.modalHeader>figure {
+  height: 0.8rem;
+  width: 0.6rem;
+}
+
+.modalHeader>figure>img {
+  height: 100%;
+  width: 100%;
+}
+
+.modalInterior {
+  /* display: none; */
+  background-color: #FFFFFF;
+  width: 18rem;
+  max-width: 100%;
+  height: 54vh;
+  border-radius: 8px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  gap: 2rem;
+}
+
+.modalForm>div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+div>label {
+  font-size: 0.875rem;
+}
+
+#tarefaTitulo,
+#selectCategoria,
+#botaoInserir {
+  height: 2.5rem;
+}
+
+#tarefaDescricao {
+  height: 5rem;
+}
+
+#tarefaDescricao,
+#tarefaTitulo,
+#selectCategoria {
+  border-radius: 4px;
+  border-style: none;
+  background-color: #F1F3F5;
+}
+
+#tarefaDescricao::placeholder,
+#tarefaTitulo::placeholder,
+#selectCategoria::placeholder {
+  padding-left: 1rem;
+  color: #343A40;
+}
+
+input:focus {
+  outline: none;
+}
+
+#botaoInserir {
+  background-color: #415AF3;
+  border-style: none;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  .modalInterior {
+    width: 31.3rem;
+  }
+}

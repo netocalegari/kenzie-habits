@@ -1,0 +1,116 @@
+.modalEditarPerfilContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.modalEditarPerfil {
+    width: 280px;
+    height: 280px;
+    padding: 30px 14px 24px;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalEditarPerfil__Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 37px;
+}
+
+.modalEditarPerfil__titulo {
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(var(--grey-1));
+}
+
+.modalEditarPerfil__btn-Fechar {
+    border: none;
+    background-color: transparent;
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--grey-3);
+    cursor: pointer;
+}
+
+.modalEditarPerfil__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalEditarPerfil__form {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+.modalEditarPerfil__form>label {
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.modalEditarPerfil__form>input {
+    width: 98%;
+    height: 40px;
+    border-radius: 4px;
+    border: 2px solid #F1F3F5;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    background: var(--grey-5);
+}
+
+.modalEditarPerfil__btn-Salvar {
+    height: 40px;
+    width: 100%;
+    border: 2px solid #A0ADF9;
+    background-color: #A0ADF9;
+    color: #FFFFFF;
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0px;
+}
+
+.modalEditarPerfil__btn-Salvar:hover {
+    height: 40px;
+    width: 100%;
+    border: 2px solid #A0ADF9;
+    background: #415AF3;
+    color: #FFFFFF;
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media (min-width:1024px) {
+    .modalEditarPerfil {
+        width: 504px;
+        height: 349px;
+    }
+}

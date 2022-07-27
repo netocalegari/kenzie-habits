@@ -1,0 +1,138 @@
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    width: 320px;
+    height: 485px;
+}
+
+.descricao {
+    display: none;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login>.form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 63px 0px 63px;
+}
+
+.login>.btn_login {
+    margin: 0px 63px 0px 63px;
+    background: var(--brand-1);
+    border: 2px solid #415AF3;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--grey-6);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 50px;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.form>label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--grey-2);
+    margin-bottom: 8px;
+}
+
+.form>input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 18px;
+    gap: 10px;
+    background: var(--grey-5);
+    border: 2px solid #F1F3F5;
+    border-radius: 4px;
+    margin-bottom: 22px;
+}
+
+.form>input:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+}
+
+.login>h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--grey-1);
+    padding: 0px 63px 0px 63px;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        width: 1080px;
+        height: 485px;
+    }
+
+    .descricao {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        background: var(--brand-2);
+        border-radius: 8px;
+    }
+
+    .descricao>h1 {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 48px;
+        color: #FFFFFF;
+        margin-left: 68px;
+    }
+
+    .descricao>h2 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+        margin-left: 68px;
+    }
+
+    .descricao>p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: var(--grey-4);
+        margin-left: 68px;
+    }
+
+    .login {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}

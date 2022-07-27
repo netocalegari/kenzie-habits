@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:wght@300;400;700&display=swap"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/homepage.css">
+  <link rel="stylesheet" href="../css/modal.css">
+  <link rel="stylesheet" href="../css/modalEditarPerfil.css">
+  <link rel="stylesheet" href="../css/modalDelete.css">
+  <link rel="stylesheet" href="../css/textoSucessoModal.css">
+  <title>KenzieHabit</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container-header dropdown">
+      <h1 class="logo">KenzieHabit</h1>
+
+      <figure class="figure-header">
+        <img src="" alt="perfil" class="perfil">
+      </figure>
+
+      <div class="dropdown-content">
+        <img src="../assets/img/Polygon 1.png" alt="setinha-dropdown" class="setinha-dropdown">
+        <div class="dropdown-editar">
+          <img src="../assets/img/dropdown-user.png" alt="Icone Usuário">
+          <span class="dropdown-text">Editar perfil</span>
+        </div>
+
+        <div class="dropdown-sair">
+          <img src="../assets/img/dropdown-voltar.png" alt="Seta voltar">
+          <span class="dropdown-img">Sair do app</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <header class="header-main">
+      <div class="container-main">
+        <figure>
+          <img src="" alt="" class="foto-usuario">
+        </figure>
+        <h2 class="nome-usuario"></h2>
+      </div>
+    </header>
+
+    <section class="filtros">
+      <h2 class="titulo-main">Tarefas</h2>
+      <div class="container-filtros">
+        <button class="button-filter" id="botaoTodos">Todos</button>
+        <button class="button-filter" id="botaoConcluidos">Concluídos</button>
+        <button class="button-filter button-last" id="botaoCriar">Criar</button>
+      </div>
+    </section>
+
+    <div class="modal">
+      <div class="containerModal">
+        <div class="headerModal">
+          <h2>Editar Hábito</h2>
+          <button id="fecharModal">
+            <img src="../assets/img/X.png" alt="">
+          </button>
+        </div>
+
+        <form id="formEditar">
+          <label for="titulo">
+            <p>Titulo</p>
+            <input type="text" name="habit_title" placeholder="Digitar título">
+          </label>
+          <label for="descricao">
+            <p>Descrição</p>
+            <input type="text" name="habit_description" placeholder="Digitar Descrição">
+          </label>
+          <label for="descricao">
+            <p>Categoria</p>
+            <select name="categorias" name="habit_category" placeholder="Selecionar categoria">
+              <option value="saude">Saúde</option>
+              <option value="trabalho">Trabalho</option>
+              <option value="estudos">Estudos</option>
+              <option value="lazer">Lazer</option>
+              <option value="casa">Casa</option>
+
+            </select>
+          </label>
+          <div class="statusModal">
+            <label>Status</label>
+            <input id="statusInput" name="habit_status" type="checkbox">
+          </div>
+          <div class="botoesModal">
+            <button class="botaoExcluirTarefa" id="excluirTarefa">Excluir</button>
+            <button type="button" class="botaoSalvarAlteracao" id="salvar">Salvar alterações</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modalTarefa" id="modalTarefa">
+      <div class="containerModalTarefa" id="containerModalTarefa">
+        <div class="modalHeader">
+          <h2>Criar hábito</h2>
+          <button id="fecharModalTarefa">
+            <img src="../assets/img/X.png" alt="">
+          </button>
+        </div>
+
+        <form action="" class="modalForm">
+          <div class="inputContainer">
+            <label for="habit_title">Título</label>
+            <input type="text" name="habit_title" id="tarefaTitulo" placeholder="Digitar título">
+          </div>
+          <div class="inputContainer">
+            <label for="habit_description">Descrição</label>
+            <input type="text" name="habit_description" id="tarefaDescricao" placeholder="Digitar descrição">
+          </div>
+
+
+          <div class="inputContainer">
+            <label for="habit_category"></label>
+            <select name="habit_category" id="selectCategoria">
+              <option value="selecionar">Selecionar categoria</option>
+              <option value="saude">Saúde</option>
+              <option value="estudos">Estudos</option>
+              <option value="casa">Casa</option>
+              <option value="lazer">Lazer</option>
+              <option value="trabalho">Trabalho</option>
+            </select>
+          </div>
+          <button type="button" id="botaoInserir">Inserir</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modalEditarPerfilContainer">
+      <div class="modalEditarPerfil">
+        <div class="modalEditarPerfil__Header">
+          <h3 class="modalEditarPerfil__titulo">Editar Perfil</h3>
+          <button class="modalEditarPerfil__btn-Fechar">X</button>
+        </div>
+        <div class="modalEditarPerfil__main">
+          <form class="modalEditarPerfil__form">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+            <label for="imagemPerfil">URL da imagem do perfil</label>
+            <input type="text" name="imagemPerfil" id="imagemPerfil">
+            <button type="button" class="modalEditarPerfil__btn-Salvar">Salvar alterações</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modalD">
+      <div class="modalDeleteContainer">
+        <div class="modalDelete" id="modalDelete">
+          <div class="headerModal">
+            <h4>Excluir Hábito</h4>
+            <p id="fechar">X</p>
+          </div>
+          <div class="mainDelete">
+            <h3>Certeza que deseja deletar este hábito?</h3>
+            <h2>Após executar essa ação, não será possível desfazer</h2>
+          </div>
+          <div class="buttonDelete">
+            <button type="button " name="buttonCancelDelete" id="buttonCancelDelete">Cancelar</button>
+            <button type="button" name="buttonConfirmDelete" id="buttonConfirmDelete">Sim, excluir este hábito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist">
+      <div class="tarefas">
+        <table class="table_mobile">
+        </table>
+      </div>
+    </div>
+
+    <button class="button-filter button-last button-mais">Carregar Mais</button>
+
+    <div class="message">
+      <img src="../assets/img/Rectangle 29.png" alt="">
+      <img src="../assets/img/check.png" alt="" class="check">
+      <div class="infos-message">
+        <h3 class="h3TituloMsg">Sucesso!</h3>
+        <p class="paragrafoDescription">Seu hábito foi atualizado!</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="module" src="../controller/abrirEFecharModal.controller.js"></script>
+  <script type="module" src="../scripts/homepageScript.js"></script>
+  <script type="module" src="../models/tarefa.model.js"></script>
+  <script type="module" src="../controller/riscarTarefa.controller.js"></script>
+  <script type='module' src="../models/modal.models.js"></script>
+  <script type="module" src="../models/filtros.models.js"></script>
+
+</body>
+
+</html>
